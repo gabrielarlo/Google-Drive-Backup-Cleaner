@@ -22,6 +22,7 @@ folder_ids = [
 
 
 def cleanup_old_files():
+    print("Cleaning up old files...")
     cutoff_date = datetime.now() - timedelta(days=30)
 
     for folder_id in folder_ids:

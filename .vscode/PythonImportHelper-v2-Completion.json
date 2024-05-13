@@ -72,7 +72,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"\n        try:\n            results = (\n                drive_service.files()\n                .list(q=query, fields=\"nextPageToken, files(id, name, modifiedTime)\")\n                .execute()\n            )",
+        "peekOfCode": "def cleanup_old_files():\n    print(\"Cleaning up old files...\")\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"\n        try:\n            results = (\n                drive_service.files()\n                .list(q=query, fields=\"nextPageToken, files(id, name, modifiedTime)\")\n                .execute()",
         "detail": "main",
         "documentation": {}
     },
@@ -90,7 +90,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "scopes = [\"https://www.googleapis.com/auth/drive\"]\ncreds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)",
+        "peekOfCode": "scopes = [\"https://www.googleapis.com/auth/drive\"]\ncreds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    print(\"Cleaning up old files...\")",
         "detail": "main",
         "documentation": {}
     },
@@ -99,7 +99,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:",
+        "peekOfCode": "creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    print(\"Cleaning up old files...\")\n    cutoff_date = datetime.now() - timedelta(days=30)",
         "detail": "main",
         "documentation": {}
     },
@@ -108,7 +108,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "drive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"",
+        "peekOfCode": "drive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    print(\"Cleaning up old files...\")\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:",
         "detail": "main",
         "documentation": {}
     },
@@ -117,7 +117,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "folder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"\n        try:",
+        "peekOfCode": "folder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    print(\"Cleaning up old files...\")\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"",
         "detail": "main",
         "documentation": {}
     }

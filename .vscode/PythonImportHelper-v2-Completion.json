@@ -1,0 +1,124 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "schedule",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "schedule",
+        "description": "schedule",
+        "detail": "schedule",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.service_account",
+        "description": "google.oauth2.service_account",
+        "isExtraImport": true,
+        "detail": "google.oauth2.service_account",
+        "documentation": {}
+    },
+    {
+        "label": "cleanup_old_files",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"\n        try:\n            results = (\n                drive_service.files()\n                .list(q=query, fields=\"nextPageToken, files(id, name, modifiedTime)\")\n                .execute()\n            )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SERVICE_ACCOUNT_FILE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SERVICE_ACCOUNT_FILE = \"service_account.json\"\nscopes = [\"https://www.googleapis.com/auth/drive\"]\ncreds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "scopes",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "scopes = [\"https://www.googleapis.com/auth/drive\"]\ncreds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "creds",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)\ndrive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "drive_service",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "drive_service = build(\"drive\", \"v3\", credentials=creds)\nfolder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "folder_ids",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "folder_ids = [\n    \"1HivNYRlfz1tin9xHXt6_7SKSpSxSGs2W\",\n    \"1ryssuYZcg-KZ9xLhfP5OYkkKGlIjJ8n2\",\n    \"14mBL7woZY0V52qwd2LVxIb-2doY4Mms1\",\n]\ndef cleanup_old_files():\n    cutoff_date = datetime.now() - timedelta(days=30)\n    for folder_id in folder_ids:\n        query = f\"'{folder_id}' in parents and trashed = false\"\n        try:",
+        "detail": "main",
+        "documentation": {}
+    }
+]
